@@ -26,7 +26,14 @@
         </div>
 
         <div class="navbar-right">
-            <button class="btn-secondary" data-open-auth="signin">Log In</button>
+            <div class="navbar-pfp" hidden>
+    <label class="pfp-upload">
+        <img class="nav-pfp" src="" alt="Your profile picture">
+        <input type="file" accept="image/*" hidden>
+    </label>
+</div>
+
+            <button class="btn-primary" data-open-auth="signin">Log In</button>
             <button class="btn-primary" data-open-auth="signup">Sign Up</button>
             <button class="hamburger-toggle" aria-label="Open Menu" aria-expanded="false">
                 <span></span>

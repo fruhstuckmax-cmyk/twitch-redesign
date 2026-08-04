@@ -25,12 +25,11 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // --- Category Pill active state -- 
+    // --- Category Pill active state sends user to main menu as no category pages yet built-- 
     const pills = document.querySelectorAll('.category-pills button');
     pills.forEach((pill) => {
         pill.addEventListener('click' , () => {
-            pills.forEach((p) => p.classList.remove('active'));
-            pill.classList.add('active');
+            window.location.href = 'index.html';
         });
     });
 

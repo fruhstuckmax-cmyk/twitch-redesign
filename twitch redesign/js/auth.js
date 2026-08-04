@@ -93,6 +93,9 @@ document.addEventListener('DOMContentLoaded', () => {
     if (loginBtn) loginBtn.hidden = true;
     if (signupBtn) signupBtn.hidden = true;
 
+    const pfpWrapper = document.querySelector('.navbar-pfp');
+    if (pfpWrapper) pfpWrapper.hidden = false;
+
     let usernameEl = document.querySelector('.nav-username');
     if (!usernameEl) {
       usernameEl = document.createElement('span');
@@ -101,6 +104,26 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     usernameEl.textContent = username;
   }
+  
+  // --- Profile picture upload ---
+const pfpInput = document.querySelector('.pfp-upload input');
+const navPfp = document.querySelector('.nav-pfp');
+
+if (pfpInput) {
+  pfpInput.addEventListener('change', (event) => {
+    const file = event.target.files[0];
+    if (!file) return;
+    const reader = new FileReader();
+    reader.onload = (e) => {
+      navPfp.src = e.target.result;
+      localStorage.setItem('twitchDemoPfp', e.target.result);
+    };
+    reader.readAsDataURL(file);
+  });
+}
+
+const savedPfp = localStorage.getItem('twitchDemoPfp');
+if (savedPfp && navPfp) navPfp.src = savedPfp;
 
   // Restore logged-in state on every page load, so it persists between
   // index.html and stream.html rather than resetting on navigation.

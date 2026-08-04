@@ -28,7 +28,14 @@
         </div>
 
         <div class="navbar-right">
-            <button class="btn-secondary" data-open-auth="signin">Log In</button>
+            <div class="navbar-pfp" hidden>
+    <label class="pfp-upload">
+        <img class="nav-pfp" src="" alt="Your profile picture">
+        <input type="file" accept="image/*" hidden>
+    </label>
+</div>
+
+            <button class="btn-primary" data-open-auth="signin">Log In</button>
             <button class="btn-primary" data-open-auth="signup">Sign Up</button>
             <button class="hamburger-toggle" aria-label="Open Menu" aria-expanded="false">
             <span></span>
@@ -159,9 +166,6 @@
         </div>
     </article>
 
-</div>
-
-                        </article>
                     </div>
                     <button class="carousel-arrow" aria-label="Scroll right">&#8250;</button>
                 </div>
@@ -195,8 +199,17 @@
             <button class="chat-delete-btn" aria-label="Delete comment">&times;</button>
         </div>
     </div>
-
+    <div class="chat-input-row">
+    <button class="emoji-toggle" aria-label="Emoji picker">😀</button>
     <input class="chat-input" type="text" placeholder="Send a message...">
+</div>
+<div class="emoji-panel" hidden>
+    <button class="emoji-option">😂</button>
+    <button class="emoji-option">🔥</button>
+    <button class="emoji-option">❤️</button>
+    <button class="emoji-option">👍</button>
+    <button class="emoji-option">🎉</button>
+    <button class="emoji-option">😮</button>
 </div>
 
 <div class="leaderboard">

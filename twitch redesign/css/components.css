@@ -346,6 +346,14 @@ reusuable Ui components: cards, buttons, chat panel, leadorboard, tags
     color:var(--text-secondary);
   }
 
+  .nav-pfp {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    object-fit: cover;
+    cursor: pointer;
+    background-color: var(--text-muted);
+  }
   .nav-username {
   color: var(--text-primary);
   font-weight: 700;
