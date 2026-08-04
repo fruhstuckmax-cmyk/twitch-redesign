@@ -1,0 +1,259 @@
+html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Twitch Redesign - Stream</title>
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+</head>
+<body>
+
+    <!-- ================ NAV BAR (Same as index.html =============)-->
+
+    <header class -"navbar">
+        <div class="navbar-left">
+            <a href="index.html" class="logo">
+                <span class="logo-icon"></span>
+                <span class="logo-text">Twitch</span>
+            </a>
+            <button class = "browse-btn">Browse</button>
+        </div>
+
+        <div class="navbar-search">
+            <input type="search" placeholder="Search" aria-label="Search">
+        </div>
+
+        <div class="navbar-right">
+            <input type="search" placeholder="Search" aria-label="Search">
+
+        </div>
+
+        <div class="navbar-right">
+            <button class="btn-secondary" data-open-auth>Log In</button>
+            <button class="btn primary" data-open-auth>Sign Up</button>
+            <button class="hamburger-toggle" aria-label="Open Menu" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+            </button>
+        </div>
+
+        <!--==================Category Pills=================-->
+<nav class="category-pills">
+    <button class="pill active">All</button>
+    <button class="pill">Gaming</button>
+    <button class="pill">Just Chatting</button>
+    <button class="pill">Music</button>
+    <button class="pill">Creative</button>
+    <button class="pill">Sports</button>
+    <button class="pill">IRL</button>
+    <button class="pill">E-Sports</button>
+    <button class="pill">New</button>
+    <!--All/ Gaming/ Just Chatting/ Music / Creative/ Sports/ IRL/ E-sports-->
+</nav>
+
+        <!--logo, browse, search, loin/signup buttons, hamburger icon-->
+     </header>
+
+     <!-- =================Customisable Channel Banner ================-->
+      <div class="channel-banner">
+        Customisable Banner For Channel
+      </div>
+
+      <div class="stream-layout">
+
+        <!--===================Player + Info (left column)==================-->
+        <div class="stream-main">
+            <div class="video-player" aria-label="Stream video player">
+                <!-- ===video/ placeholder goes here==-->
+            </div>
+            <div class="stream-info">
+                <img class="pfp" src="" alt="">
+                <span class="username">TechHi902</span>
+                <div class="stream-stats">
+                    <span class="viewers"></span>
+                    <span class="status-dot live"></span>
+                </div>
+                <div class="stream-actions">
+                    <button class="btn-primary">Subscribe</button>
+                    <button class ="btn-secondary">Follow</button>
+                </div>
+            </div>
+
+            <h1 class="stream title">Stream Title</h1>
+
+            <div class="tag-row">
+                <!-- tag pills, capped at 3-4 + "+N more-->
+            </div>\
+            
+            <p class="stream-description">Content from this creator</p>
+
+            <!-- mobile-only quick access buttons-->
+
+            <div class="mobile-panel-buttons">
+                <button class="btn-primary" data-panel="chat">Live Chat</button>
+                <button class="btn-primary" data-panel="leaderboard"></button>
+            </div>
+
+            <section class= "carousel section"></section>
+                <h2 class ="carousel-title">More From this Creator</h2>
+                <div class = "carousel-row">
+                    <button class="carousel-arrow" aria-label="Scroll left">&#8249</button>
+                    <div class="carousel-track"></div>
+                    <button class="carousel-arrow" aria-label="Scroll right">&8250;</button>
+                </div>
+            </section>
+        </div>
+
+        <!-- ================= Chat + Leaderboard (right column) =============== -->
+        <div class="chat-panel">
+    <div class="chat-panel-header">
+        <span>Stream Chat</span>
+        <div class="chat-header-actions">
+            <button class="chat-pause-toggle" aria-label="Pause chat">&#9658;</button>
+            <button class="chat-settings" aria-label="Chat settings">&#9881;</button>
+            <button class="chat-collapse-toggle" aria-label="Collapse chat">&#9650;</button>
+        </div>
+    </div>
+
+    <div class="chat-messages">
+        <div class="chat-message pinned">
+            <span class="chat-user">Diorio654</span>
+            <span class="chat-time">5:56PM</span>
+            <span class="chat-text">What a shot aint no way!!!</span>
+            <button class="chat-delete-btn" aria-label="Delete comment">&times;</button>
+        </div>
+
+        <div class="chat-message">
+            <span class="chat-user">Username</span>
+            <span class="chat-time">5:57PM</span>
+            <span class="chat-text">gg</span>
+            <button class="chat-delete-btn" aria-label="Delete comment">&times;</button>
+        </div>
+    </div>
+
+    <input class="chat-input" type="text" placeholder="Send a message...">
+</div>
+
+<div class="leaderboard">
+    <button class="leaderboard-toggle" aria-expanded="true">
+        <span class ="leaderboard-chevron">&#9660</span>Leaderboard    
+    </button>
+    <div class="collapsible-content" id="leaderboard-content">
+        <table class="leaderboard-table">
+            <thead>
+                <tr>
+                    <th>Positions</th>
+                    <th>Username</th>
+                    <th>Donation Total</th>
+                </tr>
+            </thead>
+                <tbody>
+                    <tr>
+                        <td>#1</td>
+                        <td>Bot345</td>
+                        <td>Donation Total</td>
+                    </tr>
+                    <tr>
+                        <td>#2</td>
+                        <td>Username</td>
+                        <td>$18,200</td>
+                    </tr>
+                </tbody>
+        </table>
+    </div>
+</div>
+
+
+
+      <!-- =============== Auth Modal =================-->
+      <div class="modal-overlay" id="auth-modal" hidden>
+        <div class="modal-card">
+            <button class="modal-close" aria-label="Close">&times;</button>
+
+            
+<!-- Step 1: Sign In / Create Account -->
+        <div class="auth-step" data-step="signin-signup">
+            <div class="auth-logo">
+                <span class="logo-icon"></span>
+            </div>
+
+            <div class="auth-tabs">
+                <button class="auth-tab active" data-auth-tab="signin">Sign In</button>
+                <button class="auth-tab" data-auth-tab="signup">Create Account</button>
+            </div>
+
+            <!-- Sign In fields -->
+            <form class="auth-form" data-form="sign-in">
+                <label>
+                    Email / Username
+                    <input type="text" name="identifier" required>
+                </label>
+                <label>
+                    Password
+                    <input type="password" name="password" required>
+                </label>
+                <p class="auth-link">Forgotten password? <a href="#">Click here</a></p>
+                <button type="submit" class="btn-primary">Sign In</button>
+            </form>
+
+            <!-- Create Account fields -->
+            <form class="auth-form" data-form="create-account" hidden>
+                <label>
+                    Email / Username
+                    <input type="text" name="identifier" required>
+                </label>
+                <label>
+                    Password
+                    <input type="password" name="password" required>
+                </label>
+                <label>
+                    Re-Enter Password
+                    <input type="password" name="password-confirm" required>
+                </label>
+                <p class="field-error-message"></p>
+
+                <p class="auth-security-note">
+                    🔒 You'll set up two-factor authentication next to keep your account and stream secure.
+                </p>
+
+                <button type="submit" class="btn-primary">Create Account</button>
+            </form>
+        </div>
+
+        <!-- Step 2: 2FA QR setup -->
+        <div class="auth-step" data-step="2fa-setup" hidden>
+            <div class="auth-logo"><span class="logo-icon"></span></div>
+            <p class="auth-instructions">
+                Scan this QR code using your phone's camera or an authenticator app
+                to set up two-factor authentication. This helps keep your account
+                and stream secure.
+            </p>
+            <div class="qr-placeholder"></div>
+            <button class="btn-primary" data-next="2fa-code">Next</button>
+        </div>
+
+        <!-- Step 3: 2FA code entry -->
+        <div class="auth-step" data-step="2fa-code" hidden>
+            <div class="auth-logo"><span class="logo-icon"></span></div>
+            <p class="auth-instructions">
+                Enter the authentication code from your app below.
+            </p>
+            <input type="text" class="auth-code-input" placeholder="Enter authentication code">
+            <p class="auth-link">Didn't receive a code? <a href="#">Click here to resend</a></p>
+            <button class="btn-primary" data-next="signin-signup">Next</button>
+        </div>
+
+    </div>
+</div>
+      <script src="js/main.js" defer></script>
+      <script src="js/nav.js" defer></script>
+      <script src="js/carousel.js" defer></script>
+      <script src="js/chat.js" defer></script>
+      <script src="js/leaderboard.js" defer></script>
+      <script src="js/auth.js" defer></script>
+    </body>

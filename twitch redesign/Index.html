@@ -10,7 +10,352 @@
     <link rel ="stylesheet" href="css/components.css">
 </head>
 <body>
+
+
+    <!--=======================NAV BAR========================-->
+    <header class -"navbar">
+        <div class="navbar-left">
+            <a href="index.html" class="logo">
+                <span class="logo-icon"></span>
+                <span class="logo-text">Twitch</span>
+            </a>
+            <button class = "browse-btn">Browse</button>
+        </div>
+
+        <div class="navbar-search">
+            <input type="search" placeholder="Search" aria-label="Search">
+        </div>
+
+        <div class="navbar-right">
+            <input type="search" placeholder="Search" aria-label="Search">
+
+        </div>
+
+        <div class="navbar-right">
+            <button class="btn-secondary" data-open-auth>Log In</button>
+            <button class="btn primary" data-open-auth>Sign Up</button>
+            <button class="hamburger-toggle" aria-label="Open Menu" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+            </button>
+        </div>
+        <!--logo, browse, search, loin/signup buttons, hamburger icon-->
+    </header>
     
+    <!--=======================Hamburger Drawer- mobile=============-->
+
+    <nav class="hamburger-drawer" hidden>
+        <!--Account /Followed Channels/ Top Streamers, Categories/ Sign In- Signout/ Settings-->
+    </nav>
+
+<!--==================Category Pills=================-->
+<nav class="category-pills">
+    <button class="pill active">All</button>
+    <button class="pill">Gaming</button>
+    <button class="pill">Just Chatting</button>
+    <button class="pill">Music</button>
+    <button class="pill">Creative</button>
+    <button class="pill">Sports</button>
+    <button class="pill">IRL</button>
+    <button class="pill">E-Sports</button>
+    <button class="pill">New</button>
+    <!--All/ Gaming/ Just Chatting/ Music / Creative/ Sports/ IRL/ E-sports-->
+</nav>
+
+<div class="page body">
+
+    <!-- ================ Sidebar (Desktop Only) ================-->
+     <aside class ="sidebar">
+        <div class="sidebar-section">
+            <h2 class="sidebar-header">Top Live Channels</h2>
+            <div class="channel-list-headers">
+                <span>Creators</span>
+                <span>View Count / Status</span>
+            </div>
+            <u1 Class="channel-row">
+                <li class="channel-row">
+                    <span class="username">Username</span>
+                    <span class="view-count">44.1K</span>
+                    <span class="status-dot live"></span>
+                </li>
+                   <!--Repeat per top live channel--> 
+            </u1>
+        </div>
+     </aside>
+
+     <!-- =============== Main Content: Carousels ============ -->
+      <main class ="main content">
+        <!-- repeat this section per category row-->
+         <section class ="carousel-section">
+            <h2 class= "carousel-title">Gaming</h2>
+            <div class="carousel-row">
+            <button class="carousel-arrow" aria-label ="Scroll left">*#8249;</button>
+            <div class="carousel-track">
+            <article class="card">
+                <div class="card-thumbnail"></div>
+                <div class="card-info">
+                    <img class="card-pfp" src="" alt="">
+                    <div class="card-details"></div>
+                        <span class="card-username">Username</span>
+                        <span class="card-viewers">36.1K Viewers</span>
+                    </div>
+                    <span class="status-dot live"></span>
+                </div>
+                <div class="card-tages">
+                    <span class="tag">#Gaming</span>
+                    <span class="tag">#DeadByDaylight</span>
+                </div>
+            </article>
+            <article class="card">
+                <div class="card-thumbnail"></div>
+                <div class="card-info">
+                    <img class="card-pfp" src="" alt="">
+                    <div class="card-details"></div>
+                        <span class="card-username">Username</span>
+                        <span class="card-viewers">36.1K Viewers</span>
+                    </div>
+                    <span class="status-dot live"></span>
+                </div>
+                <div class="card-tages">
+                    <span class="tag">#Gaming</span>
+                    <span class="tag">#DeadByDaylight</span>
+                </div>
+            </article>
+            <article class="card">
+                <div class="card-thumbnail"></div>
+                <div class="card-info">
+                    <img class="card-pfp" src="" alt="">
+                    <div class="card-details"></div>
+                        <span class="card-username">Username</span>
+                        <span class="card-viewers">36.1K Viewers</span>
+                    </div>
+                    <span class="status-dot live"></span>
+                </div>
+                <div class="card-tages">
+                    <span class="tag">#Gaming</span>
+                    <span class="tag">#DeadByDaylight</span>
+                </div>
+            </article>
+            <article class="card">
+                <div class="card-thumbnail"></div>
+                <div class="card-info">
+                    <img class="card-pfp" src="" alt="">
+                    <div class="card-details"></div>
+                        <span class="card-username">Username</span>
+                        <span class="card-viewers">36.1K Viewers</span>
+                    </div>
+                    <span class="status-dot live"></span>
+                </div>
+                <div class="card-tages">
+                    <span class="tag">#Gaming</span>
+                    <span class="tag">#DeadByDaylight</span>
+                </div>
+            </article>
+            <article class="card">
+                <div class="card-thumbnail"></div>
+                <div class="card-info">
+                    <img class="card-pfp" src="" alt="">
+                    <div class="card-details"></div>
+                        <span class="card-username">Username</span>
+                        <span class="card-viewers">36.1K Viewers</span>
+                    </div>
+                    <span class="status-dot live"></span>
+                </div>
+                <div class="card-tages">
+                    <span class="tag">#Gaming</span>
+                    <span class="tag">#DeadByDaylight</span>
+                </div>
+            </article>
+            </div>
+            <button class="carousel-arrow" aria-label="Scroll left">&#8250</button>
+        </div>
+         </section>
+      </main>
+</div>
+
+//Carousel #2
+      <main class ="main content">
+        <!-- repeat this section per category row-->
+         <section class ="carousel-section">
+            <h2 class= "carousel-title">Up and Coming</h2>
+            <div class="carousel-row">
+            <button class="carousel-arrow" aria-label ="Scroll left">*#8249;</button>
+            <div class="carousel-track">
+            <article class="card">
+                <div class="card-thumbnail"></div>
+                <div class="card-info">
+                    <img class="card-pfp" src="" alt="">
+                    <div class="card-details"></div>
+                        <span class="card-username">Username</span>
+                        <span class="card-viewers">36.1K Viewers</span>
+                    </div>
+                    <span class="status-dot live"></span>
+                </div>
+                <div class="card-tages">
+                    <span class="tag">#Gaming</span>
+                    <span class="tag">#DeadByDaylight</span>
+                </div>
+            </article>
+            <article class="card">
+                <div class="card-thumbnail"></div>
+                <div class="card-info">
+                    <img class="card-pfp" src="" alt="">
+                    <div class="card-details"></div>
+                        <span class="card-username">Username</span>
+                        <span class="card-viewers">36.1K Viewers</span>
+                    </div>
+                    <span class="status-dot live"></span>
+                </div>
+                <div class="card-tages">
+                    <span class="tag">#Gaming</span>
+                    <span class="tag">#DeadByDaylight</span>
+                </div>
+            </article>
+            <article class="card">
+                <div class="card-thumbnail"></div>
+                <div class="card-info">
+                    <img class="card-pfp" src="" alt="">
+                    <div class="card-details"></div>
+                        <span class="card-username">Username</span>
+                        <span class="card-viewers">36.1K Viewers</span>
+                    </div>
+                    <span class="status-dot live"></span>
+                </div>
+                <div class="card-tages">
+                    <span class="tag">#Gaming</span>
+                    <span class="tag">#DeadByDaylight</span>
+                </div>
+            </article>
+            <article class="card">
+                <div class="card-thumbnail"></div>
+                <div class="card-info">
+                    <img class="card-pfp" src="" alt="">
+                    <div class="card-details"></div>
+                        <span class="card-username">Username</span>
+                        <span class="card-viewers">36.1K Viewers</span>
+                    </div>
+                    <span class="status-dot live"></span>
+                </div>
+                <div class="card-tages">
+                    <span class="tag">#Gaming</span>
+                    <span class="tag">#DeadByDaylight</span>
+                </div>
+            </article>
+            <article class="card">
+                <div class="card-thumbnail"></div>
+                <div class="card-info">
+                    <img class="card-pfp" src="" alt="">
+                    <div class="card-details"></div>
+                        <span class="card-username">Username</span>
+                        <span class="card-viewers">36.1K Viewers</span>
+                    </div>
+                    <span class="status-dot live"></span>
+                </div>
+                <div class="card-tages">
+                    <span class="tag">#Gaming</span>
+                    <span class="tag">#DeadByDaylight</span>
+                </div>
+            </article>
+            </div>
+            <button class="carousel-arrow" aria-label="Scroll left">&#8250</button>
+        </div>
+         </section>
+      </main>
+</div>
+
     <script src= "js/main.js" defer></script>
+    <script src="js/nav.js" defer></script>
+    <script src="js/carousel.js" defer></script>
 </body>
 </html>
+
+//Carousel #3
+      <main class ="main content">
+        <!-- repeat this section per category row-->
+         <section class ="carousel-section">
+            <h2 class= "carousel-title">E-Sports</h2>
+            <div class="carousel-row">
+            <button class="carousel-arrow" aria-label ="Scroll left">*#8249;</button>
+            <div class="carousel-track">
+            <article class="card">
+                <div class="card-thumbnail"></div>
+                <div class="card-info">
+                    <img class="card-pfp" src="" alt="">
+                    <div class="card-details"></div>
+                        <span class="card-username">Username</span>
+                        <span class="card-viewers">36.1K Viewers</span>
+                    </div>
+                    <span class="status-dot live"></span>
+                </div>
+                <div class="card-tages">
+                    <span class="tag">#Gaming</span>
+                    <span class="tag">#DeadByDaylight</span>
+                </div>
+            </article>
+            <article class="card">
+                <div class="card-thumbnail"></div>
+                <div class="card-info">
+                    <img class="card-pfp" src="" alt="">
+                    <div class="card-details"></div>
+                        <span class="card-username">Username</span>
+                        <span class="card-viewers">36.1K Viewers</span>
+                    </div>
+                    <span class="status-dot live"></span>
+                </div>
+                <div class="card-tages">
+                    <span class="tag">#Gaming</span>
+                    <span class="tag">#DeadByDaylight</span>
+                </div>
+            </article>
+            <article class="card">
+                <div class="card-thumbnail"></div>
+                <div class="card-info">
+                    <img class="card-pfp" src="" alt="">
+                    <div class="card-details"></div>
+                        <span class="card-username">Username</span>
+                        <span class="card-viewers">36.1K Viewers</span>
+                    </div>
+                    <span class="status-dot live"></span>
+                </div>
+                <div class="card-tages">
+                    <span class="tag">#Gaming</span>
+                    <span class="tag">#DeadByDaylight</span>
+                </div>
+            </article>
+            <article class="card">
+                <div class="card-thumbnail"></div>
+                <div class="card-info">
+                    <img class="card-pfp" src="" alt="">
+                    <div class="card-details"></div>
+                        <span class="card-username">Username</span>
+                        <span class="card-viewers">36.1K Viewers</span>
+                    </div>
+                    <span class="status-dot live"></span>
+                </div>
+                <div class="card-tages">
+                    <span class="tag">#Gaming</span>
+                    <span class="tag">#DeadByDaylight</span>
+                </div>
+            </article>
+            <article class="card">
+                <div class="card-thumbnail"></div>
+                <div class="card-info">
+                    <img class="card-pfp" src="" alt="">
+                    <div class="card-details"></div>
+                        <span class="card-username">Username</span>
+                        <span class="card-viewers">36.1K Viewers</span>
+                    </div>
+                    <span class="status-dot live"></span>
+                </div>
+                <div class="card-tages">
+                    <span class="tag">#Gaming</span>
+                    <span class="tag">#DeadByDaylight</span>
+                </div>
+            </article>
+            </div>
+            <button class="carousel-arrow" aria-label="Scroll left">&#8250</button>
+        </div>
+         </section>
+      </main>
+</div>

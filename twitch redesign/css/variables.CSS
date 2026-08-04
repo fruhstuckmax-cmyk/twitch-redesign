@@ -1,0 +1,51 @@
+/* =========================================================
+
+variables.css
+Central Colour + sizing, pulled from Figma style guide. Change values here and should update on website
+======================================================================================================*/
+
+:root {
+/* Backgrounds*/
+--bg-page: #1F1F23;     /*main page background*/
+--bg-header: #0E0E10;      /* top nav / header background*/
+--bg-surface: #18181B;      /*cards, panels, sidebar background */
+
+/* ---- Borders / Dividers -- */
+--border-divider: #2C2C35;
+
+/*------Purple Accent Scale-----*/
+--purple-muted: #7B5EA7;    /* text-safe purple / secondary buttons / hover */
+--purple-primary: # 9147FF; /* Primary CTA fill, active states, logo */
+--purple light; #BFA3F5;    /*light purple, headers, highlights */
+
+/* ----- Text ------ */
+--text-primary: #EFEFF1;    /* main body text */
+--text-secondary: #ADADB8; /* usernames, timestamps */
+--text-muted: #848494; /*placeholder / disabled text */
+
+/*--Status--*/
+--status-live: #00C853;
+--status-offline: #EB0400;
+
+/*---Spacing scale can adjust while building*/
+--space-xs: 4px;
+--space-sm: 8px;
+--space-md: 16px;
+--space-lg: 24px;
+--space-xl: 40px;
+
+/*---Radius---*/
+--radius-sm: 4px;
+--radius-md: 8px;
+--radius-pill: 999px;
+
+/*---motion (matches the smart animate timing of my figma prototype*/
+--ease-out: cubic-bezier(0, 0, 0.2, 1);
+--ease-in: cubic-bezier(0.4,0, 1, 1);
+--duration-expand: 250ms;
+--duration-collapse: 200ms;
+--duration-toggle: 150ms;
+
+/*---Layout---*/
+--breakpoint-desktop: 1024px;
+}

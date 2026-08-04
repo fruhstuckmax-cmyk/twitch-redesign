@@ -1,0 +1,360 @@
+/*===========================================================
+layout.css
+Structural layout: nav, sidebar, grid systems, page-level positioning.
+Mobile first: base styles = mobile, override upward with @media (min-width ; var(--breakpoint-desktop)) for desktop.
+=================================================================================================================*/
+
+/*--- Top nav bar ----*/
+.navbar {
+    background-color: var(--bg-header);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-md);
+    padding: var(--space-sm) var(--space-md);
+}
+
+.navbar-left {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+}
+
+.logo {
+display: flex;
+align-items: center;
+gap:var(--space-xs);
+}
+
+.logo-text {
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+.browse-btn {
+    background-color: var(--bg-surface);
+    color:var(--text-primary);
+    border: 1px solid var(--border-divider);
+    border-radius: var(--radius-pill);
+    padding: var(--space-xs) var(--space-md);
+    display: none; /* hidden on mobile*/
+}
+
+.navbar-search {
+    flex: 1;
+    max-width: 400px;
+}
+
+.navbar-search input{
+width: 100%;
+background-color: var(--bg-surface);
+border: 1px solid var(--border-divider);
+border-radius: var(--radius-pill);
+padding: var(--space-xs) var(--space-md);
+color: var(--text-primary);
+}
+
+.navbar-search input: :placeholder {
+    color: var(--text-muted);
+}
+
+.navbar-right {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+}
+
+.navbar-right .btn-secondary,
+.navbar-right .btn-primary {
+    display: none; /* hidden on mobile shown on dekstop below
+}
+
+/*--- Hamburger icon---*/
+.hamburger-toggle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 4px;
+    width: 24px;
+    height: 24px;
+}
+
+.hamburger-drawer {
+    position: fixed;
+    top: 0;
+    right: 0; 
+    width: 260px;
+    height: 100%;
+    background-color: var(--bg-surface);
+    border-left: 1px solid var(--border-divider);
+    padding: var(--space-lg) var(--space-md);
+    transform: translateX(100%);
+    transition: transform var(--duration-expand) var(--ease-out);
+}
+
+.hamburger-drawer.open {
+    transform: translateX(0);
+    transition: transform var(--duration-expand) var(--ease-out);
+}
+
+    /* background-color: var (--bg header); */
+    /*displayt: flex; align-items: center; justify-content: space-between; */
+}
+
+/* -- Cateogry pill row ----*/
+.category-pills {
+   display: flex;
+   gap: var(--space-sm);
+   overflow-x: auto;
+   padding: var(--space-sm) var(--space-md);
+   scrollbar-width: none; /* hides scroll bar on firefox */
+}
+
+.category-pills::-webkit-scrollbar{
+    display: none; /* hide scrollbar on chrome, safari, edge*/
+}
+
+.category-pills .pill {
+    flex-shrink: 0;
+    background-color: var(--bg-surface);
+    color: var(--text-primary);
+    border: 1px solid var(--border-divider);
+    border-radius: var(--radius-pill);
+    padding: var(--space-xs) var(--space-md);
+    white-space: nowrap;
+}
+
+.category-pills .pill-active {
+background-color: var(--purple-primary);
+border-color: var(--purple-primary);
+font-weight: 700;
+}
+
+
+
+/* --- Sidebar (Followed Channels / Top Live Channels) --- */
+.sidebar {
+    display:none; /*hidden by deafult on mobile - hamburger menu replaces it */
+    width: 240px;
+    flex-shrink: 0;
+    backgrund-color: var(--bg-surface);
+}
+
+.sidebar-header {
+    background-color: var(--purple-light);
+    color: var(--bg-page); /* dark text on light purple constrast improved */
+    font-size: 0.9rem;
+    font-weight: 700;
+    padding: var(--space-sm) var(--space-md);
+}
+
+.channel-list-headers {
+    display: flex;
+    justify-content: space-inbetween;
+    padding: var(--space-xs) var(--space-md);
+    color: var(--text-muted);
+    font-size: 0.75rem;
+    border-bottom: 1px solid var(--border-divider-);
+}
+
+.channel-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-inbetween;
+    gap: var(--space-sm);
+    padding: var(--space-sm) var(--space-md);
+    border-bottom: 1px solid var(--border-divider);
+}
+
+.channel-row .username {
+    color: var(--text-primary);
+    font-size: 0.85rem;
+}
+
+.channel-row .view-count {
+    color: var(--text-primary);
+    font-size: 0.85rem;
+}
+
+
+/* Carousel Sections---*/
+.carousel-section {
+    padding:var(--space-md);
+}
+
+.carousel-title {
+    background-color: var(--bg-surface);
+    color: var(--text-primary);
+    font-size: 0.95rem;
+    padding: var(--space-sm) var(--space-md);
+    border-radius: var(--radius-sm);
+    margin-bottom: var(--space-sm);
+}
+
+.carousel-row {
+    display: flex;
+    align-items: center;
+    gap: var(--space-xs);
+}
+
+.carousel-track {
+    display: flex;
+    gap: var(--space-md);
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: none; 
+}
+
+.carousel-track::-webkit-scrollbar {
+    display: none;
+}
+
+.carousel-arrow {
+    flex-shrink: 0;
+    background-color: var(--bg-surface);
+    color: var(--text-primary);
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    font-size: 1.2rem;
+}
+
+/* --- Channel Banner ---- */
+.channel-banner {
+    background-color: var(--purple-muted);
+    color: var(--text-primary);
+    text-align: center;
+    font-weight: 700;
+    padding: var(--space-sm);
+}
+
+/* ---- Stream Page Layout ---*/
+.stream-layout {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+    padding: var(--space-md);
+}
+
+.stream-main {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+}
+.mobile-panel-buttons {
+    display: flex;
+    gap: var(--space-sm);
+}
+
+.stream-side {
+    display: none; /* hidden on mobile accessed via the buttons above instead */
+    flex-direction: column;
+    gap: var(--space-md);
+}
+
+.stream-side.mobile-open {
+    display: flex; /* main.js adds this class when a panel button is tapped */
+}
+
+/* ---Auth Modal Layout---*/
+
+.modal-card {
+    width: 100%;
+    max-width: 360px;
+    padding: var(--space-lg);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+    position: relative;
+    margin: var(--space-md);
+}
+
+.auth-logo {
+    dispaly: flex;
+    justify-content: center;
+}
+
+.auth-tabs {
+    display: flex;
+    gap: var(--space-sm);
+    justify-content: center;
+}
+
+.auth-form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+}
+
+.auth-form label {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xs);
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+ }
+
+ .auth-form input {
+    background-color: var(--bg-page);
+    border: 1px solid vare(--border-divider);
+    border-radius: var(--radius-sm);
+    padding: var(--raqdius-sm);
+    color:var(--text-primary);
+ }
+
+/* ---- Dekstop side by side columns --- */
+@media (min-width: 1024px) {
+    .stream.layout {
+        flex-direction: row;
+    }
+
+    .stream-main {
+        flex: 7;
+    }
+
+    .stream-side {
+        display: flex; /*always visibler on desktop*/
+        flex: 3;
+    }
+
+    .mobile-panel-buttons {
+        display: none /* not needed on desktop sidebar is always shown*/
+    }
+}
+/* ===== Page WrapperL Sidebar + main content --- */
+.page-body {
+    dispaly: flex;
+}
+
+.main-content {
+    flex: 1;
+    min-width: 0; /*prevents flex children from overflowing on narrower screens
+}
+/* Main content grid: stream page -- */
+.stream-layout {
+    /*display: grid; grid -template-columns: 1fr; gap: var(--space-md); */
+}
+
+/* ---Desktop overrides --- */
+@media (min-width: 1024px) {
+    .sidebar {
+        display: block;
+    }
+
+    .hamburger-toggle {
+        display:none;
+    }
+
+    .browse-btn {
+        display: block;
+    }
+
+    .navbar-right .btn secondary,
+    .navbar-right .btn-primary {
+        display: block;
+    }
+
+    .stream-layout {
+        /*grid-template-columns: 70% 30%; */
+    }
+}
