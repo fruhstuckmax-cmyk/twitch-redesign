@@ -325,6 +325,69 @@ reusuable Ui components: cards, buttons, chat panel, leadorboard, tags
     border: 1px solid var(--border-divider);
     border-radius: var(--radius-md);
 }
+  .modal-close {
+    position: absolute;
+    top: var(space--sm);
+    right: var(--space-sm);
+    font-size: 1.3rem;
+    color:var(--text-secondary);
+  }
+.auth-tab {
+  background-color: var(--bg-page);
+  color: var(--text-secondary);
+  border-radius: var(--radius-pill);
+  padding: var(--space-xs) var(--space-md);
+  font-size: 0.85rem;
+}
+
+.auth-tab.active {
+  background-color: var(--purple-primary);
+  color: var(--text-primary);
+  font-weight: 700;
+}
+
+.auth-link {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  text-align: center;
+}
+
+.auth-link a {
+  color: var(--purple-light);
+}
+
+.auth-security-note {
+  background-color: var(--bg-page);
+  border: 1px solid var(--purple-muted);
+  border-radius: var(--radius-sm);
+  padding: var(--space-sm);
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+}
+
+.auth-instructions {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  text-align: center;
+}
+
+.qr-placeholder {
+  width: 160px;
+  height: 160px;
+  background-color: var(--text-primary);
+  border: 3px solid var(--radius-sm);
+  border-radius: var(--radius-sm);
+  margin: 0 auto;
+}
+
+.auth-code-input {
+  background-color: var(--bg-page);
+  border: 1px solid var(--border-divider);
+  border-radius: var(--radius-sm);
+  padding: var(--space-sm);
+  color: var(--text-primary);
+  text-align: center;
+}
 
 /* Form error State*/
 .field-error {
