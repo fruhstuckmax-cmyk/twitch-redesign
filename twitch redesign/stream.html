@@ -1,4 +1,4 @@
-html
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,7 +14,7 @@ html
 
     <!-- ================ NAV BAR (Same as index.html =============)-->
 
-    <header class -"navbar">
+    <header class ="navbar">
         <div class="navbar-left">
             <a href="index.html" class="logo">
                 <span class="logo-icon"></span>
@@ -28,21 +28,17 @@ html
         </div>
 
         <div class="navbar-right">
-            <input type="search" placeholder="Search" aria-label="Search">
-
-        </div>
-
-        <div class="navbar-right">
             <button class="btn-secondary" data-open-auth>Log In</button>
-            <button class="btn primary" data-open-auth>Sign Up</button>
+            <button class="btn-primary" data-open-auth>Sign Up</button>
             <button class="hamburger-toggle" aria-label="Open Menu" aria-expanded="false">
             <span></span>
             <span></span>
             <span></span>
             </button>
         </div>
+     </header>
 
-        <!--==================Category Pills=================-->
+             <!--==================Category Pills=================-->
 <nav class="category-pills">
     <button class="pill active">All</button>
     <button class="pill">Gaming</button>
@@ -55,9 +51,6 @@ html
     <button class="pill">New</button>
     <!--All/ Gaming/ Just Chatting/ Music / Creative/ Sports/ IRL/ E-sports-->
 </nav>
-
-        <!--logo, browse, search, loin/signup buttons, hamburger icon-->
-     </header>
 
      <!-- =================Customisable Channel Banner ================-->
       <div class="channel-banner">
@@ -84,11 +77,11 @@ html
                 </div>
             </div>
 
-            <h1 class="stream title">Stream Title</h1>
+            <h1 class="stream-title">Stream Title</h1>
 
             <div class="tag-row">
                 <!-- tag pills, capped at 3-4 + "+N more-->
-            </div>\
+            </div>
             
             <p class="stream-description">Content from this creator</p>
 
@@ -96,20 +89,21 @@ html
 
             <div class="mobile-panel-buttons">
                 <button class="btn-primary" data-panel="chat">Live Chat</button>
-                <button class="btn-primary" data-panel="leaderboard"></button>
+                <button class="btn-primary" data-panel="leaderboard">Leaderboard</button>
             </div>
 
-            <section class= "carousel section"></section>
+            <section class= "carousel-section">
                 <h2 class ="carousel-title">More From this Creator</h2>
                 <div class = "carousel-row">
-                    <button class="carousel-arrow" aria-label="Scroll left">&#8249</button>
+                    <button class="carousel-arrow" aria-label="Scroll left">&#8249;</button>
                     <div class="carousel-track"></div>
-                    <button class="carousel-arrow" aria-label="Scroll right">&8250;</button>
+                    <button class="carousel-arrow" aria-label="Scroll right">&#8250;</button>
                 </div>
             </section>
         </div>
 
         <!-- ================= Chat + Leaderboard (right column) =============== -->
+         <aside class="stream-side" id="side-panel">
         <div class="chat-panel">
     <div class="chat-panel-header">
         <span>Stream Chat</span>
@@ -141,7 +135,7 @@ html
 
 <div class="leaderboard">
     <button class="leaderboard-toggle" aria-expanded="true">
-        <span class ="leaderboard-chevron">&#9660</span>Leaderboard    
+        <span class ="leaderboard-chevron">&#9660;</span> Leaderboard    
     </button>
     <div class="collapsible-content" id="leaderboard-content">
         <table class="leaderboard-table">
@@ -156,7 +150,7 @@ html
                     <tr>
                         <td>#1</td>
                         <td>Bot345</td>
-                        <td>Donation Total</td>
+                        <td>$25,607</td>
                     </tr>
                     <tr>
                         <td>#2</td>
@@ -167,6 +161,8 @@ html
         </table>
     </div>
 </div>
+</aside>
+</div>                      <!--closed .stream-layout-->
 
 
 
@@ -257,3 +253,4 @@ html
       <script src="js/leaderboard.js" defer></script>
       <script src="js/auth.js" defer></script>
     </body>
+</html>

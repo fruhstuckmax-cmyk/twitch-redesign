@@ -91,12 +91,12 @@ reusuable Ui components: cards, buttons, chat panel, leadorboard, tags
 }
 
 .status-dot.live{
-    background-color:var(--status-offline);
+    background-color:var(--status-live);
 }
 
 /*--- Video Player ---*/
 .video-player {
-    width: 100%
+    width: 100%;
     aspect-ratio: 16 / 9;
     background-color: var(--border-divider);
     border-left: 3px solid var(--purple-primary);
@@ -247,16 +247,16 @@ reusuable Ui components: cards, buttons, chat panel, leadorboard, tags
   color: var(--text-primary);
   padding: var(--space-xs) var(--space-md);
   border-bottom: 1px solid var(--border-divider);
-
+}
 /*--Collapsible Panel shared behaviour ---*/
 .collapsible-content {
     overflow: hidden;
-    transition: max-height var(--duration-collapse)var(--ease-out);
+    transition: max-height var(--duration-collapse) var(--ease-out);
 }
 
 .collapsible-content.collapsed {
     max-height: 0;
-    transition: max-height var(--duration-collapse)var(--ease-in);
+    transition: max-height var(--duration-collapse) var(--ease-in);
 }
 
 /* --- Stream info block ---*/
@@ -297,7 +297,7 @@ reusuable Ui components: cards, buttons, chat panel, leadorboard, tags
 }
 
 .stream-title {
-    font-sizeA: 1.1rem;
+    font-size: 1.1rem;
 }
 
 .tag-row {
@@ -327,7 +327,7 @@ reusuable Ui components: cards, buttons, chat panel, leadorboard, tags
 }
   .modal-close {
     position: absolute;
-    top: var(space--sm);
+    top: var(--space-sm);
     right: var(--space-sm);
     font-size: 1.3rem;
     color:var(--text-secondary);
@@ -375,7 +375,7 @@ reusuable Ui components: cards, buttons, chat panel, leadorboard, tags
   width: 160px;
   height: 160px;
   background-color: var(--text-primary);
-  border: 3px solid var(--radius-sm);
+  border: 3px solid var(--purple-primary);
   border-radius: var(--radius-sm);
   margin: 0 auto;
 }
@@ -396,5 +396,5 @@ reusuable Ui components: cards, buttons, chat panel, leadorboard, tags
 
 .field-error-message {
     color: var(--status-offline);
-    font-size: 085rem;
+    font-size: 0.85rem;
 }

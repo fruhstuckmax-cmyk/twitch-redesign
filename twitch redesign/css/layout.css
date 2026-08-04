@@ -54,7 +54,7 @@ padding: var(--space-xs) var(--space-md);
 color: var(--text-primary);
 }
 
-.navbar-search input: :placeholder {
+.navbar-search input::placeholder {
     color: var(--text-muted);
 }
 
@@ -66,7 +66,7 @@ color: var(--text-primary);
 
 .navbar-right .btn-secondary,
 .navbar-right .btn-primary {
-    display: none; /* hidden on mobile shown on dekstop below
+    display: none; /* hidden on mobile shown on dekstop below*/
 }
 
 /*--- Hamburger icon---*/
@@ -99,7 +99,7 @@ color: var(--text-primary);
 
     /* background-color: var (--bg header); */
     /*displayt: flex; align-items: center; justify-content: space-between; */
-}
+
 
 /* -- Cateogry pill row ----*/
 .category-pills {
@@ -124,7 +124,7 @@ color: var(--text-primary);
     white-space: nowrap;
 }
 
-.category-pills .pill-active {
+.category-pills .pill.active {
 background-color: var(--purple-primary);
 border-color: var(--purple-primary);
 font-weight: 700;
@@ -137,7 +137,7 @@ font-weight: 700;
     display:none; /*hidden by deafult on mobile - hamburger menu replaces it */
     width: 240px;
     flex-shrink: 0;
-    backgrund-color: var(--bg-surface);
+    background-color: var(--bg-surface);
 }
 
 .sidebar-header {
@@ -150,17 +150,17 @@ font-weight: 700;
 
 .channel-list-headers {
     display: flex;
-    justify-content: space-inbetween;
+    justify-content: space-between;
     padding: var(--space-xs) var(--space-md);
     color: var(--text-muted);
     font-size: 0.75rem;
-    border-bottom: 1px solid var(--border-divider-);
+    border-bottom: 1px solid var(--border-divider);
 }
 
 .channel-row {
     display: flex;
     align-items: center;
-    justify-content: space-inbetween;
+    justify-content: space-between;
     gap: var(--space-sm);
     padding: var(--space-sm) var(--space-md);
     border-bottom: 1px solid var(--border-divider);
@@ -270,7 +270,7 @@ font-weight: 700;
 }
 
 .auth-logo {
-    dispaly: flex;
+    display: flex;
     justify-content: center;
 }
 
@@ -296,15 +296,15 @@ font-weight: 700;
 
  .auth-form input {
     background-color: var(--bg-page);
-    border: 1px solid vare(--border-divider);
+    border: 1px solid var(--border-divider);
     border-radius: var(--radius-sm);
-    padding: var(--raqdius-sm);
+    padding: var(--space-sm);
     color:var(--text-primary);
  }
 
 /* ---- Dekstop side by side columns --- */
 @media (min-width: 1024px) {
-    .stream.layout {
+    .stream-layout {
         flex-direction: row;
     }
 
@@ -323,12 +323,12 @@ font-weight: 700;
 }
 /* ===== Page WrapperL Sidebar + main content --- */
 .page-body {
-    dispaly: flex;
+    display: flex;
 }
 
 .main-content {
     flex: 1;
-    min-width: 0; /*prevents flex children from overflowing on narrower screens
+    min-width: 0; /*prevents flex children from overflowing on narrower screens*/
 }
 /* Main content grid: stream page -- */
 .stream-layout {
@@ -349,7 +349,7 @@ font-weight: 700;
         display: block;
     }
 
-    .navbar-right .btn secondary,
+    .navbar-right .btn-secondary,
     .navbar-right .btn-primary {
         display: block;
     }

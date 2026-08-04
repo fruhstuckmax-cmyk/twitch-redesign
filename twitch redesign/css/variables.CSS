@@ -15,8 +15,8 @@ Central Colour + sizing, pulled from Figma style guide. Change values here and s
 
 /*------Purple Accent Scale-----*/
 --purple-muted: #7B5EA7;    /* text-safe purple / secondary buttons / hover */
---purple-primary: # 9147FF; /* Primary CTA fill, active states, logo */
---purple light; #BFA3F5;    /*light purple, headers, highlights */
+--purple-primary: #9147FF; /* Primary CTA fill, active states, logo */
+--purple-light: #BFA3F5;    /*light purple, headers, highlights */
 
 /* ----- Text ------ */
 --text-primary: #EFEFF1;    /* main body text */

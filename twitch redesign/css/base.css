@@ -10,11 +10,11 @@ Reset+ global based rules. everything here is site wide
 }
 
 html {
-    scroll-behaviour: smooth;
+    scroll-behavior: smooth;
 }
 
 body{
-    font-family: 'inter' , 'Segoe UI', Roboto, Helevetica, Arial, sans-serif
+    font-family: 'inter' , 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
     background-color: var(--bg-page);
     color: var(--text-primary);
     line-height: 1.5;
@@ -52,16 +52,18 @@ ol {
 a:focus-visible,
 button:focus-visible,
 input:focus-visible{
-    outline: 2px solid var (--purple-light);
+    outline: 2px solid var(--purple-light);
     outline-offset: 2px;
 }
 
 /*Respect reduced motion preference*/
-@media (prefers-reduced-motion: reduce) {
+@media (prefers-reduced-motion: reduce){
+*{
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
-    scroll-behaviour: auto !important;
+    scroll-behavior: auto !important;
+}
 }
 
 /*Utility: visually hidden but still readable by screen readers */
