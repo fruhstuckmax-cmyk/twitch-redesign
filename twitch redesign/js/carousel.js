@@ -3,7 +3,19 @@
 // scroll the track smoothly, rather than jumping between frames.
 
 document.addEventListener('DOMContentLoaded', () => {
-
+  const cards = document.querySelectorAll('.card');
+  cards.forEach((card)=> {
+    card.style.cursor = 'pointer';
+    card.setAttribute('tabindex','0');
+    card.addEventListener('click',()=> {
+      window.location.href = 'stream.html';
+    });
+    card.addEventListener('keydown',(event)=> {
+      if(event.key === 'Enter' || event.key === ' '){
+        window.location.href = 'stream.html';
+      }
+    });
+  });
   const carousels = document.querySelectorAll('.carousel-row');
 
   carousels.forEach((carousel) => {

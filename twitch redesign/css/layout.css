@@ -26,6 +26,14 @@ align-items: center;
 gap:var(--space-xs);
 }
 
+.logo-icon {
+    width: 24px;
+    height: 24px;
+    border-radius: var(--radius-sm);
+    background-color: var(--purple-primary);
+    display: inline-block;
+}
+
 .logo-text {
     font-weight: 700;
     font-size: 1.1rem;
@@ -37,7 +45,7 @@ gap:var(--space-xs);
     border: 1px solid var(--border-divider);
     border-radius: var(--radius-pill);
     padding: var(--space-xs) var(--space-md);
-    display: none; /* hidden on mobile*/
+    display: none; 
 }
 
 .navbar-search {
@@ -138,6 +146,7 @@ font-weight: 700;
     width: 240px;
     flex-shrink: 0;
     background-color: var(--bg-surface);
+    padding-top: var(--space-md);           /*ADDED THIS as I wanted to realign the top nav bar with category pills*/
 }
 
 .sidebar-header {

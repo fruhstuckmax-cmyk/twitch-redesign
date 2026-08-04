@@ -319,6 +319,19 @@ reusuable Ui components: cards, buttons, chat panel, leadorboard, tags
     align-items: center;
     justify-content: center;
 }
+.modal-overlay[hidden] {
+  display: none;
+}
+
+.auth-step {
+  display:flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.auth-step[hidden]{
+  display: none;
+}
 
 .modal-card{
     background-color: var(--bg-surface);
@@ -332,6 +345,27 @@ reusuable Ui components: cards, buttons, chat panel, leadorboard, tags
     font-size: 1.3rem;
     color:var(--text-secondary);
   }
+
+  .nav-username {
+  color: var(--text-primary);
+  font-weight: 700;
+  padding: var(--space-xs) var(--space-sm);
+}
+
+.auth-heading {
+  text-align: center;
+  font-size: 1.1rem;
+}
+
+.auth-switch {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  text-align: center;
+}
+
+.auth-switch a {
+  color: var(--purple-light);
+}
 .auth-tab {
   background-color: var(--bg-page);
   color: var(--text-secondary);

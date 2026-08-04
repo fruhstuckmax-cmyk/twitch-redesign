@@ -18,7 +18,7 @@
                 <span class="logo-icon"></span>
                 <span class="logo-text">Twitch</span>
             </a>
-            <button class="browse-btn">Browse</button>
+            <a href="stream.html" class="browse-btn">Browse</a>
         </div>
 
         <div class="navbar-search">
@@ -26,8 +26,8 @@
         </div>
 
         <div class="navbar-right">
-            <button class="btn-secondary" data-open-auth>Log In</button>
-            <button class="btn-primary" data-open-auth>Sign Up</button>
+            <button class="btn-secondary" data-open-auth="signin">Log In</button>
+            <button class="btn-primary" data-open-auth="signup">Sign Up</button>
             <button class="hamburger-toggle" aria-label="Open Menu" aria-expanded="false">
                 <span></span>
                 <span></span>
@@ -42,7 +42,7 @@
         <a href="#" class="drawer-link">Followed Channels</a>
         <a href="#" class="drawer-link">Top Streamers</a>
         <a href="#" class="drawer-link">Categories</a>
-        <a href="#" class="drawer-link" data-open-auth>Sign In / Sign Out</a>
+        <a href="#" class="drawer-link" data-open-auth="signin">Sign In / Sign Out</a>
         <a href="#" class="drawer-link">Settings</a>
     </nav>
 
@@ -288,8 +288,100 @@
                 </div>
             </section>
 
+            
             <section class="carousel-section">
                 <h2 class="carousel-title">E-Sports</h2>
+                <div class="carousel-row">
+                    <button class="carousel-arrow" aria-label="Scroll left">&#8249;</button>
+                    <div class="carousel-track">
+
+                        <article class="card">
+                            <div class="card-thumbnail"></div>
+                            <div class="card-info">
+                                <img class="card-pfp" src="" alt="">
+                                <div class="card-details">
+                                    <span class="card-username">Username</span>
+                                    <span class="card-viewers">36.1K Viewers</span>
+                                </div>
+                                <span class="status-dot live"></span>
+                            </div>
+                            <div class="card-tags">
+                                <span class="tag">#Gaming</span>
+                                <span class="tag">#DeadByDaylight</span>
+                            </div>
+                        </article>
+
+                        <article class="card">
+                            <div class="card-thumbnail"></div>
+                            <div class="card-info">
+                                <img class="card-pfp" src="" alt="">
+                                <div class="card-details">
+                                    <span class="card-username">Username</span>
+                                    <span class="card-viewers">36.1K Viewers</span>
+                                </div>
+                                <span class="status-dot live"></span>
+                            </div>
+                            <div class="card-tags">
+                                <span class="tag">#Gaming</span>
+                                <span class="tag">#DeadByDaylight</span>
+                            </div>
+                        </article>
+
+                        <article class="card">
+                            <div class="card-thumbnail"></div>
+                            <div class="card-info">
+                                <img class="card-pfp" src="" alt="">
+                                <div class="card-details">
+                                    <span class="card-username">Username</span>
+                                    <span class="card-viewers">36.1K Viewers</span>
+                                </div>
+                                <span class="status-dot live"></span>
+                            </div>
+                            <div class="card-tags">
+                                <span class="tag">#Gaming</span>
+                                <span class="tag">#DeadByDaylight</span>
+                            </div>
+                        </article>
+
+                        <article class="card">
+                            <div class="card-thumbnail"></div>
+                            <div class="card-info">
+                                <img class="card-pfp" src="" alt="">
+                                <div class="card-details">
+                                    <span class="card-username">Username</span>
+                                    <span class="card-viewers">36.1K Viewers</span>
+                                </div>
+                                <span class="status-dot live"></span>
+                            </div>
+                            <div class="card-tags">
+                                <span class="tag">#Gaming</span>
+                                <span class="tag">#DeadByDaylight</span>
+                            </div>
+                        </article>
+
+                        <article class="card">
+                            <div class="card-thumbnail"></div>
+                            <div class="card-info">
+                                <img class="card-pfp" src="" alt="">
+                                <div class="card-details">
+                                    <span class="card-username">Username</span>
+                                    <span class="card-viewers">36.1K Viewers</span>
+                                </div>
+                                <span class="status-dot live"></span>
+                            </div>
+                            <div class="card-tags">
+                                <span class="tag">#Gaming</span>
+                                <span class="tag">#DeadByDaylight</span>
+                            </div>
+                        </article>
+
+                    </div>
+                    <button class="carousel-arrow" aria-label="Scroll right">&#8250;</button>
+                </div>
+            </section>
+
+            <section class="carousel-section">
+                <h2 class="carousel-title">Just Chilling</h2>
                 <div class="carousel-row">
                     <button class="carousel-arrow" aria-label="Scroll left">&#8249;</button>
                     <div class="carousel-track">
@@ -385,5 +477,56 @@
     <script src="js/main.js" defer></script>
     <script src="js/nav.js" defer></script>
     <script src="js/carousel.js" defer></script>
-</body>
-</html>
+    <script src="js/auth.js" defer></script>
+
+    <div class="modal-overlay" id="auth-modal" hidden>
+  <div class="modal-card">
+    <button class="modal-close" aria-label="Close">&times;</button>
+
+    <!-- Sign In -->
+    <div class="auth-step" data-step="signin">
+      <div class="auth-logo"><span class="logo-icon"></span></div>
+      <h2 class="auth-heading">Sign In</h2>
+      <form class="auth-form" data-form="sign-in">
+        <label>Email / Username<input type="text" name="identifier" required></label>
+        <label>Password<input type="password" name="password" required></label>
+        <p class="auth-link">Forgotten password? <a href="#">Click here</a></p>
+        <button type="submit" class="btn-primary">Sign In</button>
+      </form>
+      <p class="auth-switch">New here? <a href="#" data-switch-auth="signup">Create an account</a></p>
+    </div>
+
+    <!-- Create Account -->
+    <div class="auth-step" data-step="signup" hidden>
+      <div class="auth-logo"><span class="logo-icon"></span></div>
+      <h2 class="auth-heading">Create Account</h2>
+      <form class="auth-form" data-form="create-account">
+        <label>Email / Username<input type="text" name="identifier" required></label>
+        <label>Password<input type="password" name="password" required></label>
+        <label>Re-Enter Password<input type="password" name="password-confirm" required></label>
+        <p class="field-error-message"></p>
+        <p class="auth-security-note">🔒 You'll set up two-factor authentication next to keep your account and stream secure.</p>
+        <button type="submit" class="btn-primary">Create Account</button>
+      </form>
+      <p class="auth-switch">Already have an account? <a href="#" data-switch-auth="signin">Sign in</a></p>
+    </div>
+
+    <!-- 2FA QR setup -->
+    <div class="auth-step" data-step="2fa-setup" hidden>
+      <div class="auth-logo"><span class="logo-icon"></span></div>
+      <p class="auth-instructions">Scan this QR code using your phone's camera or an authenticator app to set up two-factor authentication.</p>
+      <div class="qr-placeholder"></div>
+      <button class="btn-primary" data-next="2fa-code">Next</button>
+    </div>
+
+    <!-- 2FA code entry -->
+    <div class="auth-step" data-step="2fa-code" hidden>
+      <div class="auth-logo"><span class="logo-icon"></span></div>
+      <p class="auth-instructions">Enter the authentication code from your app below.</p>
+      <input type="text" class="auth-code-input" placeholder="Enter authentication code">
+      <p class="auth-link">Didn't receive a code? <a href="#">Click here to resend</a></p>
+      <button class="btn-primary" data-next="complete">Next</button>
+    </div>
+
+  </div>
+</div>
