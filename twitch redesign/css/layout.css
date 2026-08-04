@@ -29,9 +29,7 @@ gap:var(--space-xs);
 .logo-icon {
     width: 24px;
     height: 24px;
-    border-radius: var(--radius-sm);
-    background-color: var(--purple-primary);
-    display: inline-block;
+    
 }
 
 .logo-text {
