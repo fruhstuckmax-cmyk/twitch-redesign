@@ -202,6 +202,37 @@ reusuable Ui components: cards, buttons, chat panel, leadorboard, tags
   color: var(--text-muted);
 }
 
+/* --- Emoji picker --- */
+.chat-input-row {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+  border-top: 1px solid var(--border-divider);
+}
+
+.emoji-toggle {
+  padding: var(--space-sm);
+  font-size: 1rem;
+}
+
+.emoji-panel {
+  display: flex;
+  gap: var(--space-xs);
+  background-color: var(--bg-page);
+  padding: var(--space-xs) var(--space-sm);
+}
+
+.emoji-panel[hidden] {
+  display: none;
+}
+
+.emoji-option {
+  font-size: 1.1rem;
+  padding: 2px 4px;
+}
+
+
+
 /*Leaderbaord Panel --- */
 .leaderboard {
   background-color: var(--bg-surface);

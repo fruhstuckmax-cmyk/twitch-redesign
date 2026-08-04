@@ -25,15 +25,22 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // --- Category Pill active state sends user to main menu as no category pages yet built-- 
-    const pills = document.querySelectorAll('.category-pills button');
-    pills.forEach((pill) => {
-        pill.addEventListener('click' , () => {
-            window.location.href = 'index.html';
-        });
-    });
+    // --- Category pill click: highlight + route to homepage ---
+const pills = document.querySelectorAll('.category-pills button');
 
-
+pills.forEach((pill) => {
+  pill.addEventListener('click', () => {
+    // Remember which category was picked so it stays highlighted
+    // after the page reload (a JS class alone won't survive navigation).
+    localStorage.setItem('twitchDemoActiveCategory', pill.textContent.trim());
+    window.location.href = 'index.html';
+  });
 });
 
-
+// --- Restore the active pill on page load, based on the last click ---
+const savedCategory = localStorage.getItem('twitchDemoActiveCategory');
+if (savedCategory) {
+  pills.forEach((pill) => {
+    pill.classList.toggle('active', pill.textContent.trim() === savedCategory);
+  });
+}

@@ -1,22 +1,32 @@
-// main.js
-// shared init logic that runs for all pages
+document.addEventListener('DOMContentLoaded', () => {
+  console.log('Site loaded.');
 
-document.addEventListener('DOMContentLoaded',()=> {
-    console.log('Site Loaded');
-    //Add any site wide init calls here as features are built
-    //Mobile: Live chat/ leaderboard quick access buttons----
-    //On Mobile, chat + leaderboard start hidden  inside #side-panel.
-    //Tappingeither button reveals the panel and scrolls to the relevant section within it
+  const panelButtons = document.querySelectorAll('[data-panel]');
+  const sidePanel = document.getElementById('side-panel');
 
-    const panelButtons = document.querySelectorAll('[data-panel]');
-    const sidePanel = document.getElementById('side-panel');
+  panelButtons.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      if (!sidePanel) return;
+      sidePanel.classList.add('mobile-open');
 
-    panelButtons.forEach((btn) => {
-        btn.addEventListener('click' ,() => {
-            if (!sidePanel) return;
-            sidePanel.classList.add('mobile-open');
-            const target =sidePanel.querySelector('.${btn.dataset.panel}-panel');
-            if (target) target.scrollIntoView({ behaviour: 'smooth'});
-        });
+      const target = sidePanel.querySelector(`.${btn.dataset.panel}-panel`);
+      if (!target) return;
+
+      target.scrollIntoView({ behavior: 'smooth' });
+
+      // If this is the chat panel and it's currently collapsed, expand it
+      if (target.classList.contains('chat-panel') && target.classList.contains('collapsed')) {
+        target.classList.remove('collapsed');
+      }
+
+      // If this panel contains a collapsible section (leaderboard) and it's
+      // collapsed, expand it and keep the toggle button's aria state in sync
+      const collapsibleContent = target.querySelector('.collapsible-content');
+      if (collapsibleContent && collapsibleContent.classList.contains('collapsed')) {
+        collapsibleContent.classList.remove('collapsed');
+        const toggleBtn = target.querySelector('.leaderboard-toggle');
+        if (toggleBtn) toggleBtn.setAttribute('aria-expanded', 'true');
+      }
     });
+  });
 });
